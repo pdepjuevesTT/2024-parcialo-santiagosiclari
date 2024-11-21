@@ -50,7 +50,7 @@ class Debito{
     method descontar(persona, costo){persona.modificarDebito(costo)}
 }
 
-object credito{
+class Credito{
     const property cantCuota = []
     var property cuotas = 10
     var property costoCuota = 0

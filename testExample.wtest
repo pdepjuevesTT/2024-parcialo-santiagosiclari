@@ -1,11 +1,15 @@
-import solucion1.*
+import persona.*
+import metodosPago.*
 
 describe "Describe1" {
+
   const debito1 = new Debito()
-  const juan = new Persona(dineroEfectivo = 500,dineroDebito = 400,metodoPreferido = debito1, metodos = [efectivo, debito1])
+  const credito1 = new Credito()
+  const juan = new Persona(dineroEfectivo = 500,dineroDebito = 400,metodoPreferido = debito1, metodos = [debito1])
   const pancho = new Persona(metodoPreferido = debito1)
+
   test "Test1" {
-    assert.that(pancho.metodoPreferido().puedoPagar(juan, 300))
+    assert.that(juan.metodoPreferido().puedoPagar(juan, 300))
 
   }
 }
