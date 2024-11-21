@@ -28,6 +28,14 @@ class Credito{
     method agregarAdeudas(persona){persona.deudas().addAll(self.cantCuota())} //AGREGA TODAS LAS CUOTAS A LAS DEUDAS DE LA PERSONA
 }
 
+class NuevoCredito inherits Credito{
+    var property limiteCuotas = 11
+
+    override method cantidadPorCuota(costo){
+        if(cuotas <= limiteCuotas){
+            costoCuota = (costo + costo * banco.interes()) / cuotas}}//CALCULA EL VALOR DE CADA CUOTA 
+}
+
 object banco{
     var property montoMaximo = 5000
     var property interes = 2/100

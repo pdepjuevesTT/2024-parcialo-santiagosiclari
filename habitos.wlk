@@ -8,5 +8,4 @@ class CompradoresCompulsivo inherits Persona{
 }
 
 class PagadoresCompulsivo inherits Persona{
-
 }

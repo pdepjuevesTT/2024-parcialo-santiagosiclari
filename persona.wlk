@@ -11,7 +11,12 @@ class Persona{
     var property deudas = []
 
     method pagarDeuda(){
-        deudas.forEach({deuda => deuda})
+        deudas.forEach({deuda =>
+            if((dineroCredito - deuda) > 0){
+                deudas.remove(deuda)
+            }
+
+        })
     }
 
     method totalDeudasImpagas() = deudas.sum{deuda => deuda}
@@ -25,6 +30,7 @@ class Persona{
     method comprar(costo){
         if(metodoPreferido.puedoPagar(self,costo)){
             metodoPreferido.descontar(self, costo)
+            cantCompras+1
         }
     }
 
@@ -39,10 +45,6 @@ class Persona{
             salario = cantidad
         }
     }
-
-    method pagoParcial(){
-    }
-
 }
 
 object meses{
@@ -56,4 +58,11 @@ object meses{
         personas.forEach({persona => persona.cobrarSalario(persona.salario())})
         personas.forEach({persona => persona.administrarPagos()})
     }
+}
+
+object ganador{
+    const property personas = []
+
+    method ganador(persona) =
+        personas.forEach({personaje => personaje.cantCompras() > persona.cantCompras()})
 }
