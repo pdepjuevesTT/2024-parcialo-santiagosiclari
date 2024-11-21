@@ -437,3 +437,7 @@
 {"level":"info","message":"onRequest - completionItem/resolve","timestamp":"2024-11-21T19:37:09.059Z"}
 {"failures":[{"error":["wollok.lang.MessageNotUnderstoodException: a Credito does not understand puedoPagarjuan(arg 0,arg 1)","  at testExample.\"Describe1\".\"Test juan Credito\" [testExample.wtest:21]"],"test":"testExample.\"Describe1\".\"Test juan Credito\""}],"level":"info","message":"🧪 Test runner executed on /Users/santiagosiclari/Documents/GitHub/2024-parcialo-santiagosiclari","result":{"failed":1,"ok":0},"timeElapsed":160,"timestamp":"2024-11-21T19:37:12.116Z"}
 {"failures":[],"level":"info","message":"🧪 Test runner executed on /Users/santiagosiclari/Documents/GitHub/2024-parcialo-santiagosiclari","result":{"failed":0,"ok":1},"timeElapsed":155,"timestamp":"2024-11-21T19:37:30.123Z"}
+{"level":"info","message":"onRequest - STRONG_FILES_CHANGED:/Users/santiagosiclari/Documents/GitHub/2024-parcialo-santiagosiclari/solucion1.wlk","timestamp":"2024-11-21T19:38:47.688Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":105,"timestamp":"2024-11-21T19:38:47.793Z"}
+{"level":"info","message":"onRequest - WORKSPACE_URI:file:///Users/santiagosiclari/Documents/GitHub/2024-parcialo-santiagosiclari","timestamp":"2024-11-21T19:38:47.845Z"}
+{"level":"info","message":"Removing diagnostics from /Users/santiagosiclari/Documents/GitHub/2024-parcialo-santiagosiclari/solucion1.wlk","timestamp":"2024-11-21T19:38:47.943Z"}
