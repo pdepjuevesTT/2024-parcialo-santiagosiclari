@@ -5,6 +5,7 @@ class Persona{
     var property metodoPreferido = efectivo
     var property salario = 100
     var property cantCompras = 0
+    var property metodos = []
 
     method comprar(costo){
         if(metodoPreferido.puedoPagar(self,costo)){
@@ -24,6 +25,9 @@ class Persona{
         }
     }
 
+    method pagoParcial(){
+    }
+
 }
 
 class MetodoPago{
@@ -38,7 +42,9 @@ object efectivo{
     method descontar(persona, costo){persona.modificarEfectivo(costo)}
 }
 
-object debito{
+class Debito{
+    method monto(persona) = persona.dineroDebito()
+
     method puedoPagar(persona, costo) = persona.dineroDebito() >= costo
 
     method descontar(persona, costo){persona.modificarDebito(costo)}
@@ -54,9 +60,8 @@ object credito{
 
     method agregar(costo){cuotas.times{cantCuota.add(self.cantidadPorCuota(costo))}}
 
-    method puedoPagar(persona, costo){
+    method puedoPagar(persona, costo) =
         banco.montoMaximo() > costo
-    }
 }
 
 object banco{
