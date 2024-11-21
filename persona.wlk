@@ -13,6 +13,7 @@ class Persona{
     method pagarDeuda(){
         deudas.forEach({deuda =>
             if((dineroCredito - deuda) > 0){
+                dineroCredito -= deuda
                 deudas.remove(deuda)
             }
 
@@ -30,7 +31,7 @@ class Persona{
     method comprar(costo){
         if(metodoPreferido.puedoPagar(self,costo)){
             metodoPreferido.descontar(self, costo)
-            cantCompras+1
+            cantCompras += 1
         }
     }
 

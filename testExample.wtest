@@ -19,6 +19,7 @@ describe "Describe1" {
   }
 
   test "Test juan Credito"{
-    
+    const juan = new Persona(dineroEfectivo = 500, dineroDebito = 400, dineroCredito = 500, metodoPreferido = credito1, metodos = [credito1, efectivo])
+    assert.that(juan.metodoPreferido().puedoPagar(juan, 300))
   }
 }
