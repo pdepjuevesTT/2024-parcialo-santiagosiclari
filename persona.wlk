@@ -1,5 +1,6 @@
 import metodosPago.*
 class Persona{
+
     var property dineroEfectivo = 0
     var property dineroDebito = 0
     var property dineroCredito = 0
@@ -9,10 +10,16 @@ class Persona{
     var property metodos = []
     var property deudas = []
 
-    method pagarDeuda(){}
+    method pagarDeuda(){
+        deudas.forEach({deuda => deuda})
+    }
 
-    method administrarPagos(){
+    method totalDeudasImpagas() = deudas.sum{deuda => deuda}
 
+    method cambiarPreferido(nuevoPreferido){
+        if(metodos.contains(nuevoPreferido)){
+            metodoPreferido = nuevoPreferido
+        }
     }
 
     method comprar(costo){
@@ -46,6 +53,7 @@ object meses{
 
     method transcurre(){
         self.pasaMes()
+        personas.forEach({persona => persona.cobrarSalario(persona.salario())})
         personas.forEach({persona => persona.administrarPagos()})
     }
 }

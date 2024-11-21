@@ -5,11 +5,20 @@ describe "Describe1" {
 
   const debito1 = new Debito()
   const credito1 = new Credito()
-  const juan = new Persona(dineroEfectivo = 500,dineroDebito = 400,metodoPreferido = debito1, metodos = [debito1])
+  //const juan = new Persona(dineroEfectivo = 500,dineroDebito = 400,metodoPreferido = debito1, metodos = [debito1])
   const pancho = new Persona(metodoPreferido = debito1)
 
-  test "Test1" {
+  test "Test juan efectivo" {
+    const juan = new Persona(dineroEfectivo = 500, metodoPreferido = efectivo, metodos = [efectivo])
     assert.that(juan.metodoPreferido().puedoPagar(juan, 300))
+  }
 
+  test "Test juan Debito" {
+    const juan = new Persona(dineroEfectivo = 500, dineroDebito = 400, metodoPreferido = debito1, metodos = [debito1, efectivo])
+    assert.that(juan.metodoPreferido().puedoPagar(juan, 300))
+  }
+
+  test "Test juan Credito"{
+    
   }
 }
